@@ -5,14 +5,6 @@ import java.util.Map;
 
 // BEGIN
 public class App {
-
-    public static void main(String[] args) {
-    Map<String, Integer> map2 =  getWordCount("java is the best programming language java" +
-            " java java java");
-        System.out.println(map2);
-        System.out.println(toString(map2));
-    }
-
     public static Map<String, Integer> getWordCount(String string) {
         Map<String, Integer> map = new HashMap<>();
         if (string.isEmpty()) {
@@ -25,8 +17,9 @@ public class App {
                 value = map.get(element) + 1;
                 map.remove(element);
                 map.put(element, value);
+            } else {
+                map.put(element, 1);
             }
-            else map.put(element, 1);
         }
         return map;
     }
