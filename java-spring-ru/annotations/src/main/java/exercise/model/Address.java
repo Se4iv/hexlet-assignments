@@ -12,9 +12,8 @@ public class Address {
     }
 
     // BEGIN
-    
-    // END
     @Inspect
+    // END
     public String getCity() {
         return city;
     }
