@@ -28,7 +28,7 @@ public class Application {
 
     // BEGIN
     @PostMapping("/posts")
-    public Post createPost(@RequestBody Post post) {
+    public Post create(@RequestBody Post post) {
         posts.add(post);
         return post;
     }
